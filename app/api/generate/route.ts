@@ -20,7 +20,8 @@ import type {
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-export const maxDuration = 300;
+// Vercel Hobby functions are capped at 60 seconds; a higher value fails the build.
+export const maxDuration = 60;
 
 function parseInput(value: unknown): FormInputs {
   if (!value || typeof value !== "object") throw new Error("Invalid form input.");

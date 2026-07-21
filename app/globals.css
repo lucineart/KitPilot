@@ -184,6 +184,13 @@ button:disabled {
   font-weight: 400;
 }
 
+.field-helper {
+  margin: 6px 2px 0;
+  color: var(--slate);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
 .select-wrap,
 .kit-selector-field {
   position: relative;
@@ -1189,6 +1196,25 @@ button:disabled {
 
   .empty-steps li {
     min-height: 62px;
+  }
+}
+
+@media (max-width: 420px) {
+  .kit-selector-field {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .select-wrap select {
+    padding-right: 42px;
+  }
+
+  .kit-ready-chip {
+    position: static;
+    align-self: flex-end;
+    transform: none;
   }
 }
 

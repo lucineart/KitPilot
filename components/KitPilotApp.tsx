@@ -433,12 +433,16 @@ export function KitPilotApp() {
 
             <FormSection number={7} label="Special notes" hint="optional">
               <textarea
+                aria-describedby="special-notes-help"
                 className="text-input notes-input"
                 value={form.specialNotes}
                 maxLength={1200}
                 placeholder="Support needs, classroom setup, or pacing notes…"
                 onChange={(event) => updateForm("specialNotes", event.target.value)}
               />
+              <p className="field-helper" id="special-notes-help">
+                Do not include student names or personal data.
+              </p>
             </FormSection>
 
             <button className="generate-button" type="submit" disabled={isGenerating}>
